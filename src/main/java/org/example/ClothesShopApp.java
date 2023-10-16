@@ -19,7 +19,7 @@ public class ClothesShopApp
             System.out.println("2-To remove clothes");
             System.out.println("3-Display clothes list");
             System.out.println("4-Exit the program");
-            System.out.print("Choose the number:  ");
+            System.out.print("Choose the number: ");
 
             String choice;
             choice = scanner.nextLine();
