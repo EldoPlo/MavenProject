@@ -19,15 +19,11 @@ public class ClothesShopApp
             System.out.println("2-To remove clothes");
             System.out.println("3-Display clothes list");
             System.out.println("4-Exit the program");
+
             System.out.print("Choose the number: ");
 
             String choice;
             choice = scanner.nextLine();
-            if (!((choice.equalsIgnoreCase("1")) || (choice.equalsIgnoreCase("2")) || (choice.equalsIgnoreCase("3")) || (choice.equalsIgnoreCase("4")))) {
-                System.out.println("Nieprawidłowa opcja. Wybierz ponownie.");
-                continue;
-            }
-
 
             switch (choice)
             {
@@ -57,14 +53,13 @@ public class ClothesShopApp
                 {
                     System.out.println("Which clothes you want to remove: ");
                     String name = scanner.nextLine();
-                    boolean removed = false;
                     List<Clothes> clothesList = clothesShop.getClothesList();
+
                     for (Clothes clothes : clothesList)
                     {
                         if (clothes.getName().equalsIgnoreCase(name))
                         {
                             clothesShop.removeClothes(clothes);
-                            removed = true;
                             System.out.print(clothes.getName() + " was removed");
                             break;
                         }
@@ -80,7 +75,7 @@ public class ClothesShopApp
                 }
                 case "4" -> runningCondition = false;
 
-                default -> throw new Exception("Unsupported argument");
+                default ->  System.out.println("Nieprawidłowa opcja. Wybierz ponownie.");
             }
         }
 
