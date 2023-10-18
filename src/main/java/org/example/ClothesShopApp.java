@@ -51,7 +51,7 @@ public class ClothesShopApp
 
                 case "2" ->
                 {
-                    System.out.println("Which clothes you want to remove: ");
+                    System.out.println("Which clothes you want to remove:  ");
                     String name = scanner.nextLine();
                     List<Clothes> clothesList = clothesShop.getClothesList();
 
